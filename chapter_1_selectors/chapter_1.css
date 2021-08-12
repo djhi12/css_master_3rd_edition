@@ -7,12 +7,14 @@ h1 {
     font-family: 'Roboto', sans-serif;
 }
 
-h2, a {
+h2 {
     font-family: 'Montserrat', sans-serif;
+    color: green;
 }
 
 a {
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a:hover {
