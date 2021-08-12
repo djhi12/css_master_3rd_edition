@@ -1,0 +1,28 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    color: green;
+}
+/* The Descendant Combinator */
+form h1 {
+    color: hsl(231, 48%, 48%);
+}
+
+/*
+form p {
+    font-size: 36px;
+    color: #c2185b;
+}
+*/
+
+/* The Child Combinator */
+form > p {
+    font-size: 36px;
+    color: #c2185b;
+}
+
+/* The Adjacent Sibling Combinator */
