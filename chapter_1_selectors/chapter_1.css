@@ -3,6 +3,8 @@ body {
     margin: auto;
 }
 
+
+
 /* 
 Types of Selectors 
 1. Descendant Selector
@@ -14,3 +16,4 @@ Types of Selectors
 
 /* Combinators */
 
+/* The Descendant Combinator */
