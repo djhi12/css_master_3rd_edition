@@ -1,0 +1,16 @@
+body {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* 
+Types of Selectors 
+1. Descendant Selector
+2. Descendant Selector Child Selector (>)
+3. Adjacent Sibling Selector (+)
+4. General Sibling Selector (~)
+*/
+
+
+/* Combinators */
+
