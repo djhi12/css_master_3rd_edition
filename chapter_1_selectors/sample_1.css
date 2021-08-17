@@ -7,6 +7,15 @@ body {
 h2 {
     color: green;
 }
+
+h3 {
+    color: orange;
+}
+
+h4 {
+    color: purple;
+}
+
 /* The Descendant Combinator */
 form h1 {
     color: hsl(231, 48%, 48%);
@@ -26,3 +35,108 @@ form > p {
 }
 
 /* The Adjacent Sibling Combinator */
+
+label + input {
+    display: block;
+    clear: both;
+}
+
+
+* + fieldset {
+    margin: 5em 0;
+}
+
+
+/* The General Sibling Combinator */
+label ~ input {
+    display: block;
+    clear: both;
+}
+
+
+/* Attribute Selectors */
+
+
+/* Matching Space-separated Attribute Values */
+[rel~=friend] {
+    font-size: 2em;
+    background: #eee;
+    padding: 4px;
+    text-decoration: none;
+    border-bottom: 3px solid #ccc;
+}
+
+[rel~=friend]:link, [rel~=friend]:visited {
+    color: #34444c;
+}
+
+[rel~=friend]:hover {
+    background-color: #ffeb3b;
+    border-color: #ffc107;
+}
+
+/* Matching Hyphenated Attribute Values */
+[lang|="fr"] {
+    font-style: italic;
+}
+[lang|="fr"] q:before {
+    content: '\00AB'; /* Left angle quote */
+}
+[lang|="fr"] q:after {
+    content: '\00AB'; /* Right angle quote */
+}
+
+.h3-promo {
+    color: black;
+}
+
+
+[class|="promo"] {
+    border-top: 5px solid #4caf50;
+    color: #555;
+    line-height: 1.3;
+    padding-top: .5em;
+}
+[class|="promo"] h3 {
+    color:#000;
+    font-size: 1.2em;
+    margin: 0;
+}
+[class|="promo"] p {
+    margin: 0 0 1em;
+}
+
+[class|="promo-entertainment"] {
+    border-color: red;
+}
+[class|="promo-sports"] {
+    border-color: blue;
+}
+[class|="promo-business"] {
+    border-color: pink;
+}
+
+
+/* Matching Attribute Values by Substring */
+[href^="tel:"] {
+    background: #2196f3 /* url(../../images/phone-icon.svg) */ 10px center / 20px auto no-repeat;
+    border-radius: 100px;
+    padding: .5em 1em .5em 2em;
+    color: white;
+}
+
+
+/* Matching Attribute Values by Case */
+#MixedCaseIDExample {
+    margin-top: 10px;
+}
+
+[id=mixedcaseidexample i] {
+    color: blue;
+}
+
+
+
+
+
+
