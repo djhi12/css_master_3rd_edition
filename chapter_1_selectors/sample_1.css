@@ -135,6 +135,80 @@ label ~ input {
     color: blue;
 }
 
+/* Pseudo-classes and Pseudo-elements */
+
+/* Pseudo-elements */
+
+/* ::before and ::after */
+span::after {
+    content: ' (Required) ';
+    color: #c00;
+    font-size: .8em;
+}
+
+.helptext::before,
+.helptext::after {
+    color: hsl(340, 82%, 52%);
+}
+.helptext::before {
+    content: ' ( ';
+}
+.helptext::after {
+    content: ' ) ';
+}
+
+
+/* Creating Typographic Effects with ::first-letter */
+p.typo-effect-first-letter::first-letter {
+    font-family: serif;
+    font-weight: bold;
+    font-size: 3em;
+    font-style: italic;
+    color: #3f51b5;
+    line-height: .5em;
+}
+
+p.typo-effect2-first-letter::first-letter {
+    font: normal 10rem / 1 'Alfa Slab One', serif;
+    color: hsl(291, 64%, 30%);
+    display: inline-block;
+    padding-right: .25rem;
+}
+
+p.typo-effect3-first-letter::first-letter {
+    float: left;
+    font: normal 10rem / 1 'Alfa Slab One', serif;
+    color: hsl(200, 18%, 46%);
+    margin-bottom: .4rem;
+    padding: 1rem 1.4rem 0 0;
+    text-shadow: 2px 2px 0px hsl(200, 100%, 10%);
+}
+
+p.typo-effect4-first-letter::first-letter {
+    float: left;
+    font: normal 10rem / 1 'Alfa Slab One', serif;
+    color: hsl(200, 18%, 46%);
+    margin-bottom: .4rem;
+    padding: 1rem 1.4rem 0 0;
+    text-shadow: 2px 2px 0px hsl(200, 100%, 10%);
+}
+
+p.typo-effect5-first-letter::first-letter {
+    float: left;
+    font: normal 10rem / 1 'Alfa Slab One', serif;
+    color: hsl(200, 18%, 46%);
+    margin-bottom: .4rem;
+    padding: 1rem 1.4rem 0 0;
+    text-shadow: 2px 2px 0px hsl(200, 100%, 10%);
+}
+
+
+/* Creating Typographic Effects with ::first-line */
+p.typo-effect6-first-letter::first-line {
+    font: bold 1.5em serif;
+    font-style: italic;
+    color: #673ab7;
+}
 
 
 
