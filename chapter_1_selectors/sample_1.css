@@ -211,6 +211,66 @@ p.typo-effect6-first-letter::first-line {
 }
 
 
+/* User Interface Fun with ::selection */
+p.ui-selection::selection {
+    background: #9f0; /* Lime green */
+    color: #600;
+}
 
 
+/* Custom List and Summary Icons with ::marker */
+ol li::marker {
+    color: blue;
+    font-size: 4rem;
+}
+
+ul {
+    list-style: upper-roman;
+}
+ul li::marker {
+    font-size: 4rem;
+    color: green;
+}
+
+
+/* Styling Input ::placeholder Values */
+[placeholder*=yourname]::placeholder {
+    color: rgba(0, 0, 100, 1);
+    font-weight: bold;
+}
+
+
+/* Pseudo-classes */
+/* Styling the :root of a Document */
+
+:root {
+    --color--primary: blue;
+    --color-secondary: magenta;
+    --color-tertiary: yellowgreen;
+    --font-size: 50px;
+}
+
+div.style-root {
+    border: 1px solid red;
+    background-color: var(--color--primary);
+    color: var(--color-tertiary);
+    font-size: var(--font-size);
+}
+
+
+/* Highlighting Page Fragments with :target */
+div p a {
+    color: green;
+}
+
+article.comment:target {
+    border: 2px solid #D4D4D4;
+    background-color: red;
+    color: white;
+    padding: 10px 10px;
+     max-width: 120px;
+}
+
+
+/* Styling Elements That Have No Children Using :empty */
 
