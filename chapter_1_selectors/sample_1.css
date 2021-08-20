@@ -274,3 +274,11 @@ article.comment:target {
 
 /* Styling Elements That Have No Children Using :empty */
 
+
+/* Concise and Resilient Selectors with :is() */
+article :is(h4.is-selector1) {
+    color: pink;
+}
+article :is(h4.is-selector2) {
+    color: brown;
+}
