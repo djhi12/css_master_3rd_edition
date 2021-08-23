@@ -294,3 +294,9 @@ ul:first-child {
 ul:last-child {
     color: #4caf50;
 }
+
+/* :first-child and :last-child */
+
+/* :only-child */
+
+/*  :nth-child() and :nth-last-child() */
