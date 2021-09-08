@@ -15,11 +15,13 @@
         rel="stylesheet">
     <style>
         :root {
-            --primary-color: #0ad0f9ff;
+            --primary-color: black;
+            --footer-link-hover: #0cg; /* Not a valid color value */
         }
 
         body {
             background: var(--primary-color);
+            color: gray;
         }
 
         main {
@@ -28,6 +30,9 @@
             margin: auto;
         }
 
+        footer p {
+            color: var(--footer-link-hover);
+        }
 
     </style>
 </head>
@@ -35,7 +40,12 @@
 <body>
     <main>
         <h1>Custom Properties | Chapter 4</h1>
-
+        <h2>Setting a Fallback Value</h2>
+        <footer>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus temporibus 
+                distinctio accusamus in provident ipsum doloremque tenetur quae aliquid, rem 
+                ullam ex. Expedita aliquid deserunt tenetur dolores eligendi ipsa deleniti?</p>
+        </footer>
     </main>
     <script src="/chapter_1_selectors/chapter_1.js"></script>
 </body>
