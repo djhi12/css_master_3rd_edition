@@ -30,8 +30,6 @@
 
             --brand-primary: hsl( var( --brand-hue ) 100% 50% );
             --brand-highlight: hsl( var( --brand-hue ) 100% 50% );
-
-
         }
 
         main {
@@ -58,7 +56,13 @@
                 ullam ex. Expedita aliquid deserunt tenetur dolores eligendi ipsa deleniti?</p>
         </footer>
     </main>
-    <script src="/chapter_1_selectors/chapter_1.js"></script>
+
+    <script>
+        // Using Custom Properties with JavaScript
+        const supportCustom = CSS.supports('red');
+        console.log(supportCustom); // false
+    </script>
+
 </body>
 
 </html>
