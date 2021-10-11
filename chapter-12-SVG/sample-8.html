@@ -29,11 +29,45 @@
         <h2>Animating and Transitioning SVG CSS Properties</h2>
         
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 497 184" xml:space="preserve">
+          <style>
+            @keyframes twinkle {
+                from {
+                fill-opacity: .4;
+            } 
+            to { 
+                fill-opacity: 0;
+                transform: scale( 2 );
+            }
+        }
+            .star {
+                fill: rgb( 255,195, 0 );
+                transform-origin: 50% 50%;
+            }
+
+            .twinkle {
+                animation: twinkle 1.5s infinite forward ease-in;
+            }
+
+            circle {
+                cx: 20px;
+                cy: 20px;
+                r: 20px;
+                fill: blue;
+                transition: stroke-dasharray 1s ease-in;
+                stroke-dasharray: 0, 500;
+            }
+
+            .animate {
+                stroke-dasharray: 500, 0;
+            }
+          </style>
             <defs>
                 <link href="/chapter-12-SVG/sample-8.css" type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
             </defs>
             <polygon class="star" points="77,23.7 98.2,66.6 145.5,66.5 111.2,106.9 119.3,154 77,131.8 34.7,154 42.8,106.9 8.5,67.5 55.8,66.6"/>
             <polygon class="star twinkle" points="77,23.7 98.2,66.6 145.5,66.5 111.2,106.9 119.3,154 77,131.8 34.7,154 42.8,106.9 8.5,67.5 55.8,66.6"/>
+            
+            <circle class="animate" />
         </svg>
     </main>
 
