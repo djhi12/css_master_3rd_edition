@@ -34,9 +34,31 @@
     font-size: 40px;
   }
 }
-@media screen and (hover: on-demand) {
+/*
+@media screen and ( hover: on-demand ) {
+    input[type=checkbox] + label {
+        padding: 15em;
+    }
+}
+*/
+@media screen and (hover: none) and (pointer: coarse) {
   input[type=checkbox] + label {
-    padding: 0.5em;
+    padding: 15em;
+  }
+}
+.animation {
+  animation: pulse 1s linear infinite both;
+  background: lightblue;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
+@media (prefers-reduced-motion: no-prefence) {
+  .animation {
+    animation-name: dissolve;
   }
 }
 
