@@ -1,5 +1,54 @@
-@media screen {
-    main {
+// Media Query Syntax: The Basics
+@media screen, print {
+    .media-query-basics {
         color: red;
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (width: 500px) {
+    nav li {
+        display: inline;
+        font-size: 30px;
+    }
+}
+
+
+// Range Media Features and min- and max- Prefixes
+@media (max-width: 500px) {
+    .min-max-width {
+        color: blue;
+        font-size: 30px;
+    }
+}
+
+
+@media (min-width: 450px) and (max-width: 700px) {
+    .min-max-width-swith {
+        color: green;
+        font-size: 30px;
+    }
+}
+
+
+// Discrete Media Features
+@media screen and ( orientation: portrait ) {
+    .discrete-media-par-1 {
+        color: purple;
+        font-size: 30px;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .discrete-media-par-2 {
+        color: gray;
+        font-size: 40px;
+    }
+}
+
+@media screen and ( hover: on-demand ) {
+    input[type=checkbox] + label {
+        padding: .5em;
     }
 }
