@@ -61,5 +61,27 @@
     animation-name: dissolve;
   }
 }
+.wiggle {
+  margin-top: 10px;
+  background: lightgreen;
+  border-radius: 10px;
+  width: 100px;
+  padding: 20px;
+  text-align: center;
+  animation: wiggling 3s ease-in infinite forwards alternate;
+}
+
+/*
+@media screen and ( prefers-reduced-motion ) {
+    .wiggle {
+        animation-play-state: paused;
+    }
+}
+*/
+@media screen and (prefers-reduced-motion: no-preference) {
+  .wiggle {
+    animation-play-state: wiggling 3s ease-in infinite forwards alternate running;
+  }
+}
 
 /*# sourceMappingURL=sample-1.css.map */

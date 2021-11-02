@@ -1,5 +1,6 @@
 // Media Query Syntax: The Basics
-@media screen, print {
+@media screen,
+print {
     .media-query-basics {
         color: red;
         font-size: 20px;
@@ -33,7 +34,7 @@
 
 
 // Discrete Media Features
-@media screen and ( orientation: portrait ) {
+@media screen and (orientation: portrait) {
     .discrete-media-par-1 {
         color: purple;
         font-size: 30px;
@@ -55,8 +56,8 @@
 }
 */
 
-@media screen and ( hover: none ) and ( pointer:coarse ) {
-    input[type=checkbox] + label {
+@media screen and (hover: none) and (pointer:coarse) {
+    input[type=checkbox]+label {
         padding: 15em;
     }
 }
@@ -65,6 +66,8 @@
 //
 
 //--------------------
+
+// Sample
 .animation {
     animation: pulse 1s linear infinite both;
     background: lightblue;
@@ -72,13 +75,39 @@
     width: 100px;
     text-align: center;
     border-radius: 10px;
-  }
-  
-  /* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
-  @media (prefers-reduced-motion: no-prefence) {
+}
+
+/* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
+@media (prefers-reduced-motion: no-prefence) {
     .animation {
-      animation-name: dissolve;
+        animation-name: dissolve;
     }
-  }
+}
 
 //--------------------
+
+.wiggle {
+    margin-top: 10px;
+    background: lightgreen;
+    border-radius: 10px;
+    width: 100px;
+    padding: 20px;
+    text-align: center;
+    animation: wiggling 3s ease-in infinite forwards alternate;
+}
+
+/*
+@media screen and ( prefers-reduced-motion ) {
+    .wiggle {
+        animation-play-state: paused;
+    }
+}
+*/
+
+
+// @media screen and not ( prefers-reduced-motion ) also works
+@media screen and (prefers-reduced-motion: no-preference) {
+    .wiggle {
+        animation-play-state: wiggling 3s ease-in infinite forwards alternate running;
+    }
+}
