@@ -82,12 +82,13 @@
                 <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
                 <label for="vehicle3"> I have a boat</label><br><br>
                 <input type="submit" value="Submit">
-              </form>
+            </form>
         </div>
 
         <div>
-            <h1>Using prefers-reduced-motion to Improve the Experience of People with Vestibular and Seizure Disorders</h1>
-            
+            <h1>Using prefers-reduced-motion to Improve the Experience of People with Vestibular and Seizure Disorders
+            </h1>
+
             <!---->
             <h3>Sample</h3>
             <div class="animation">Animation Box</div>
@@ -128,11 +129,37 @@
 
         <div>
             <h1>Using Media Queries with JavaScript</h1>
-            <button onclick="myFunction">Click it!</button>
+            <button onclick="myFunction()">Click it!</button>
             <div id="demoMediaQueries"></div>
         </div>
-    </main>
 
+        <div class="error-checking">
+            <h1>Error Checking with not all</h1>
+        </div>
+
+        <!--<script src="/chapter-10-applying-css-conditionally/sample-1.js /"></script> -->
+        <script>
+            // Window matchMedia() Method
+            function myFunction() {
+                const smallScreen = window.matchMedia('(max-width: 200px)');
+                const windowSize = document.getElementById("demoMediaQueries");
+
+                if (smallScreen.matches) {
+                    windowSize.innerHTML = "The screen is less than, or equal to, 700 pixels wide.";
+                    document.body.style.backgroundColor = 'lightblue';
+                } else {
+                    windowSize.innerHTML = "The screen as at least 700 pixels wide.";
+                    document.body.style.backgroundColor = 'lightgreen';
+                }
+
+                console.log(windowSize);
+            }
+
+            //-----------------------------
+            const isWiderScreen = matchMedia("(min-width: 960px)");
+            console.log(isWiderScreen);
+        </script>
+    </main>
 </body>
 
 </html>
