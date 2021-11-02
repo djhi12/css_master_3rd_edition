@@ -171,7 +171,14 @@ print {
 }
 
 // Negating Media Queries
+@media not screen and ( min-width: 650px ) {
+    .negating {
+        color: purple;
+    }
+}
 
+
+// Other Ways to Use Media Queries
 
 
 
