@@ -111,3 +111,75 @@ print {
         animation-play-state: wiggling 3s ease-in infinite forwards alternate running;
     }
 }
+
+
+// prefers-color-scheme
+@media ( prefers-color-scheme: dark ) {
+    /* Styles here */
+}
+
+/* Styles when there's no preference */
+:root {
+    --background: #ccc;
+    --foreground: #333;
+    --button-bg: #505;
+    --button-fg: #eee;
+    --link: #909;
+    --visited: #606;
+}
+
+/* Update colors for the background, foreground, and buttons */
+@media  screen and ( prefers-color-scheme: light ) {
+    :root {
+        --background: #fff;
+        --foreground: #000;
+        --button-bg: #c0c;
+        --button-fg: #fff;
+    }
+}
+
+@media screen and ( prefers-color-scheme: dark ) {
+    :root {
+        --background: #222;
+        --foreground: #eee;
+        --button-bg: #808;
+        --button-fg: #fff;
+        --link: #f0f;
+        --visited: #30f;
+    }
+}
+
+// Nesting @media Rules
+@media screen {
+    @media ( min-width: 320px ){
+        .media-rules {
+            color: gray;
+            font-size: 10px;
+        }
+    }
+    @media ( min-width: 640px ) {
+        .media-rules {
+            color: yellow;
+            font-size: 15px;
+        }
+    }
+}
+
+// Working around Legacy Browser Support with only
+@media only screen and ( min-resolution: 2dppx ) {
+    /* Styles go here */
+}
+
+// Negating Media Queries
+
+
+
+
+
+
+
+
+
+
+
+
