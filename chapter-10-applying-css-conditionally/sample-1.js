@@ -1,3 +1,5 @@
+
+
 // Window matchMedia() Method
 function myFunction() {
     const windowSize = document.getElementById("demoMediaQueries");
