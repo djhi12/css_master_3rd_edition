@@ -27,6 +27,8 @@
         <h1>Applying CSS Conditionally | Chapter 10</h1>
         <div class="media-query-basics">
             <h1>Listening for Media Changes</h1>
+
+            <!-- addEventListener -->
             <div class="wrapper">
                 <div id="message" class="hide">
                     You won't see this message until after you clicked the button. Click again to hide me!
@@ -35,14 +37,43 @@
                     Click me!
                 </div>
             </div>
+
             <script>
+
+                const isLandscape = matchMedia("( orientation: landscape )");
+                const toggleClass = mediaquery => {
+                    if (mediaquery.matches) {
+                        document.body.classList.add('widescreen');
+                    } else {
+                        document.body.classList.remove('widescreen');
+                    }
+                }
+
+                // add this event listener
+                isLandscape.addEventListener( 'change', toggleClass );
+
+                // To remove a listener
+                // isLandscape.removeEventListener( toggleClass );
+
+                if( typeof isLadscape.addEventListener === 'function') {
+                    isLandscape.addEventListener( 'change', toggleClass );
+                } else {
+                    isLandscape.addEventListener(toggleClass);
+                }
+
+                /************************************************/
+                /*
                 let button = document.querySelector('#button');
                 let msg = document.querySelector('#message');
 
                 button.addEventListener('click', () => {
                     msg.classList.toggle('reveal');
                 })
+                */
+
+                /*************************************************/
             </script>
+
     </main>
 </body>
 
